@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    background-color:purple ;
+    color: #e0e0e0;
+    text-align: center;
+}
+.container {
+    margin: 30px 20px;
+}
+.container .counter {
+    font-size: 60px;
+}
+
+@media (min-width: 580px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
