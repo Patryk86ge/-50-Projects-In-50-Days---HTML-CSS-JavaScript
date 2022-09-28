@@ -1,0 +1,123 @@
+:root {
+    --left--bg-color:rgba(87,84,236,0.7);
+    --right--bg-color:rgba(43,43,43,0.8);
+    --left--btn-hover-color:rgba(87,84,236,1);
+    --right--btn-hover-color:rgba(28,122,28,1);
+    --hover-width:75%;
+    --other-width:25%;
+
+
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+h1 {
+    color: white;
+    position: absolute;
+    font-size: 45px;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+.btn {
+    color: white;
+    position: absolute;
+    font-size: 1rem;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 15px 45px;
+    white-space: nowrap;
+}
+
+.split.left .btn:hover {
+    background-color: var(--left--btn-hover-color);
+    border-color: var(--left--btn-hover-color);
+}
+.split.right .btn:hover {
+    background-color: var(--right--btn-hover-color);
+    border-color: var(--right--btn-hover-color);
+}
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: #333333;
+    position: relative;
+}
+.split {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.split.left {
+    left: 0;
+    background-image: url("pexels-cottonbro-3945670.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.split.left::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--left--bg-color) ;
+}
+
+.split.right {
+    right: 0;
+    background-image: url("pexels-imthiyaz-syed-12339571.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+.split.right::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--right--bg-color) ;
+}
+.split.left,
+.split.right,
+.split.left::before,
+.split.right::before {
+    transition: all 1s ease-in-out;
+}
+
+.hover_left .left {
+    width: var(--hover-width);
+}
+.hover_left .right {
+    width: var(--other-width);
+}
+
+.hover_right .right {
+    width: var(--hover-width);
+}
+.hover_right .left {
+    width: var(--other-width);
+}
+@media  (max-width: 800px){
+    .btn {
+        padding: 5px 15px;
+    }
+
+
+}
+
+
+
+
