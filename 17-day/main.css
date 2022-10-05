@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Monoton&family=Roboto&display=swap');
+:root {
+    --primery-color: #22254b;
+    --secendery-color: #373b69;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--primery-color);
+    overflow-x: hidden;
+}
+
+header {
+    background-color: var(--secendery-color);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+header input {
+    background-color: var(--secendery-color);
+    border: 2px solid var(--primery-color);
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+header input::placeholder {
+    color: #7378c5;
+}
+header input:focus {
+    outline: none;
+    color: #7378c5;
+    background-color: var(--primery-color);
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.move_box {
+    width: 300px;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--secendery-color);
+    box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+    border-radius: 3px;
+    font-family: 'Roboto' ,sans-serif;
+    cursor: pointer;
+}
+
+.move_box img {
+    width: 100%;
+}
+.move_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+    padding: 0 10px;
+    margin: 10px 0 40px 0;
+    font-size: 1rem;
+}
+.move_info span {
+    background-color: var(--primery-color);
+    width: 35px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.move_info span.green {
+    color: lawngreen;
+}
+.move_info span.orange {
+    color: orange;
+}
+.move_info span.red {
+    color: red;
+}
+
+.move_info h3{
+    font-size: 1.2rem;
+    letter-spacing: .2rem;
+}
+.overview{
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 0 10px;
+    max-height: 100%;
+    transform: translateY(101%);
+    transition: .3s ease-in;
+
+}
+.move_box:hover .overview {
+    transform: translateY(0);
+}
+.overview h3 {
+    margin: 15px 0;
+    font-size: 1rem;
+    letter-spacing: .1rem;
+}
+.overview p {
+    font-size: .8rem;
+    line-height: 1.3rem;
+    margin-bottom: 15px;
+}
