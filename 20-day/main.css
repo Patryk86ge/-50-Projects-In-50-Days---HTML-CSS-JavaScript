@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #333333;
+}
+
+.btn__circle {
+    background-color: #7d5fff;
+    padding: 20px 40px;
+    color: #ffffff;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+}
+.btn__circle:focus {
+    outline: none;
+}
+.circle{
+    background-color: #e2e1e1;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    border-radius: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    animation: scale .5s ease-out;
+}
+@keyframes scale {
+    to {
+        transform: translate(-50%,-50%) scale(3);
+        opacity: 0;
+    }
+}
