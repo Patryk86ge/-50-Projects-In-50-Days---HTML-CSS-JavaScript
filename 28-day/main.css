@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 300px;
+}
+
+.header {
+    padding: 20px 30px;
+    background-color: #2b88f0;
+}
+
+.title {
+    font-size: 18px;
+    color: #eeeeee;
+}
+
+.subtitle {
+    display: inline-block;
+    margin: 10px 0;
+    color: #eeeeee;
+    opacity: 0.6;
+}
+.header input {
+    background-color: rgba(0,0,0,0.3);
+    border: none;
+    color: #eeeeee;
+    border-radius: 50px;
+    width: 100%;
+    padding: 10px 15px;
+
+}
+.header input:focus {
+    outline: none;
+}
+.user__list{
+    overflow-y: auto;
+    max-height: 400px;
+    background-color: #ffffff;
+    list-style-type: none;
+}
+.user__list li {
+    display: flex;
+    align-items: center;
+    padding: 20px 30px ;
+}
+.user__list img {
+    border-radius: 50%;
+    margin-right:  10px;
+    object-fit: cover;
+    width: 50px;
+    height: 50px;
+}
+.user__info h4 ,p{
+    padding: 2px 0;
+}
+.user__info h4 {
+  font-size: 18px;
+}
+.user__info  {
+    font-size: 13px;
+}
+.user__list li:not(:last-of-type) {
+    border-bottom: 1px solid #eeeeee;
+}
+.user__list li.hiden {
+    display: none;
+}
+
+
+
