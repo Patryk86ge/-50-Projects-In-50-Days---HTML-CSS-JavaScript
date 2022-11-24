@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+    /*margin: 0;*/
+    /*padding: 0;*/
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.logo {
+    width: 200px;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.text {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.btn {
+    background-color: #ffffff;
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: .3s ease-in-out;
+    max-width: 300px;
+    min-width: 200px;
+}
+
+.nav.nav__visible {
+    transform: translateX(0);
+}
+
+
+.nav__black {
+    background-color: black;
+    width: 60%;
+    transition-delay: .4s;
+}
+.nav__black.nav__visible {
+    transition-delay: 0s;
+}
+
+.nav__red {
+    width: 95%;
+    background-color: red;
+    transition-delay: .2s;
+}
+.nav__red.nav__visible {
+    transition-delay: 0.2s;
+}
+
+.nav__wait {
+    position: relative;
+    width: 95%;
+    background-color: #ffffff;
+    transition-delay: 0s;
+}
+.nav__wait.nav__visible {
+    transition-delay: 0.4s;
+}
+.nav ul li {
+    list-style: none;
+    margin: 10px 0;
+
+}
+.nav ul li a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+.nav ul:first-child {
+    padding-left: 20px;
+}
+.btn_close {
+    left: 90%;
+}
+.nav__logo {
+    width: 100%;
+}
