@@ -5,36 +5,15 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="main.css">
-  <title>Quiz App</title>
+  <title>Custom Range Slider</title>
 </head>
 <body>
-<div class="quiz__container">
-  <div class="quiz__header">
-    <h1 class="question">question</h1>
-    <ul>
-      <li>
-        <input type="radio" id="a" name="answer" class="answer">
-        <label for="a" class="a_answer">question</label>
-      </li>
-
-      <li>
-        <input type="radio" id="b" name="answer" class="answer">
-        <label for="b" class="b_answer">question</label>
-      </li>
-
-      <li>
-        <input type="radio" id="c" name="answer" class="answer">
-        <label for="c" class="c_answer">question</label>
-      </li>
-
-      <li>
-        <input type="radio" id="d" name="answer" class="answer">
-        <label for="d" class="d_answer">question</label>
-      </li>
-    </ul>
-  </div>
-  <button class="quiz__btn">Submit</button>
+<h2>Custom Range Slider</h2>
+<div class="container__range">
+  <input id="range" type="range" min="0" max="100">
+  <label for="range">50</label>
 </div>
+
 <script src="app.js"></script>
 </body>
 </html>

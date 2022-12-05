@@ -1,37 +1,37 @@
-const imageContainer = document.querySelector(".image__container");
-const image = document.querySelectorAll(".image__container img");
-const btnLeft = document.querySelector(".left");
-const btnRight = document.querySelector(".right");
+const empties = document.querySelectorAll(".empty");
+const fill = document.querySelector(".fill");
 
-let counter = 0;
-let interval = setInterval(run,2000);
+fill.addEventListener('dragstart',dragStart);
+fill.addEventListener('dragend',dragEnd);
 
-function run (){
-  counter++;
-  changeImg();
-}
-function changeImg () {
-  if (counter > image.length -1 ){
-    counter = 0;
-  }else if (counter < 0){
-    counter = image.length -1;
-  }
-  imageContainer.style.transform = `translateX(${-counter * 300}px)`;
+for (const empty of empties) {
+  empty.addEventListener('dragover',dragOver);
+  empty.addEventListener('dragenter',dragEnter);
+  empty.addEventListener('dragleave',dragLeave);
+  empty.addEventListener('drop',dragDrop);
+
 }
 
-function resetInterval()  {
-  clearInterval(interval);
-  interval = setInterval(run,2000);
+function dragStart() {
+  this.className += ' hold';
+  setTimeout(() => this.className = ' invisible',0);
 }
+function dragEnd() {
+  this.className = 'fill'
+}
+function dragOver(e) {
+  e.preventDefault()
 
-btnRight.addEventListener('click',() => {
-  counter++;
-  changeImg();
-  resetInterval();
+}
+function dragEnter(e) {
+  e.preventDefault()
+  this.className += ' hovered'
 
-})
-btnLeft.addEventListener('click',() => {
-  counter--;
-  changeImg();
-  resetInterval();
-})
+}
+function dragLeave() {
+  this.className = 'empty'
+}
+function dragDrop() {
+  this.className = 'empty'
+  this.append(fill);
+}
