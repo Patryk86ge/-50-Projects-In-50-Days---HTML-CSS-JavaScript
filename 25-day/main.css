@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Monoton&family=Open+Sans&family=Roboto&family=Rubik+80s+Fade&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #222;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*-------------nav*/
+.nav {
+    position: fixed;
+    background-color: #222;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.3s ease-in-out;
+}
+.nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    transition: all 0.3s ease-in-out;
+}
+.nav .logo a {
+    text-decoration: none;
+    color: #eeeeee;
+    font-size: 2rem;
+}
+.nav ul {
+    display: flex;
+}
+.nav li  {
+    list-style: none;
+    margin: 0 10px;
+    font-size: .9rem;
+}
+.nav li a {
+    list-style: none;
+    color: #eeeeee;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+
+}
+.nav.active {
+    background-color: #eeeeee;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+.nav.active a {
+    color: black;
+}
+.nav.active .container {
+    padding: 10px 0;
+}
+.nav a.current, .nav a:hover {
+    color: red;
+    font-weight: bold;
+}
+.hero {
+    background-image: url("./pexels-george-morina-4960464.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #eeeeee;
+    z-index: -2;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+.hero h1 {
+    text-align: center;
+    margin:-20px 0 20px;
+    font-size: 46px;
+}
+.hero h1,
+.hero p {
+    text-align: center;
+}
+
+.content {
+    height: 100vh;
+}
+
+.content h2, h3 {
+    font-size: 200%;
+    margin: 10px 0;
+}
+
+.content p {
+    letter-spacing: 2px;
+    line-height: 22px;
+    color: #555;
+}
