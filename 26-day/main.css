@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+    height: 100vh;
+}
+
+.container_slider {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+/*----------------------left_slide*/
+.left_slide {
+    height: 100%;
+    width: 35%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform .5s ease-in-out;
+}
+
+.left_slide > div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #ffffff;
+}
+
+.left_slide h1 {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.left_slide p {
+    font-size: 16px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/*------right_slide*/
+
+.right_slide {
+    height: 100%;
+    width: 65%;
+    position: absolute;
+    top: 0;
+    left: 35%;
+    transition: transform .5s ease-in-out;
+}
+
+.right_slide > div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+
+}
+
+/*----------------buttons*/
+
+.btn_action button {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    padding: 15px 10px;
+    font-size: 25px;
+    cursor: pointer;
+    border: none;
+    z-index: 10;
+    background-color:  #fff;
+    color:  #aaa;
+
+}
+
+.btn_action button:hover {
+    color: #222;
+}
+
+.btn_action button:focus {
+    outline: none;
+}
+
+.btn_action .down_btn {
+    transform: translateX(-100%);
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.btn_action .up_btn {
+    transform: translateY(-100%);
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
