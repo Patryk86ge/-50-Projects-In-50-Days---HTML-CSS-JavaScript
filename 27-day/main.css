@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: rebeccapurple;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/*-----------------------message_btn*/
+.message_btn {
+    padding: 1rem;
+    font-size: 20px;
+    font-weight: bold;
+    border: 0;
+    border-radius: 5px;
+    color:  rebeccapurple;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+.message_btn:focus {
+    outline: none;
+}
+.message_btn:active{
+    transform: scale(.98);
+}
+/*-------------message_container*/
+.message_container {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+.message {
+    background-color: #ffffff;
+    border-radius: 5px;
+    color: #aaaaaa;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.message.info {
+    color:  rebeccapurple;
+}
+.message.success {
+    color:  green;
+}
+.message.error {
+    color:  red;
+}
+
