@@ -8,9 +8,8 @@ async function getUser(username) {
     const {data} = await axios(API_URL + username);
     user(data);
     getRepoUser(username)
-    console.log(data);
   } catch (err) {
-    if (err.response.status == 404) {
+    if (err.response.status === 404) {
       errModal('No profile with this username');
     }
 
@@ -41,9 +40,6 @@ function user(data) {
         <li>${data.public_repos} <strong>Repos</strong></li>
       </ul>
       <div class="repos">
-<!--        <a href="#" class="repos">Repo1</a>-->
-<!--        <a href="#" class="repos">Repo2</a>-->
-<!--        <a href="#" class="repos">Repo3</a>-->
       </div>
     </div>
   </div>

@@ -88,6 +88,9 @@ body {
 
 .box_user {
     margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .box_user ul {
